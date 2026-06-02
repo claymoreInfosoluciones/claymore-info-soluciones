@@ -4,175 +4,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reparación de Computadoras en Nicoya | Claymore Info Soluciones</title>
-  <meta name="description" content="Soporte técnico profesional en Nicoya y alrededores. Reparación de computadoras, mantenimiento, optimización, eliminación de virus, redes, Internet y venta de repuestos." />
-  <meta name="keywords" content="reparación de computadoras Nicoya, soporte técnico Nicoya, mantenimiento de computadoras, computadora lenta, redes e internet Nicoya, Claymore Info Soluciones" />
+  <meta name="description" content="Soporte técnico profesional en Nicoya y alrededores. Reparación de computadoras, mantenimiento preventivo, redes, optimización, virus y venta de repuestos. Diagnóstico inicial gratis." />
   <style>
     :root{
-      --bg:#050806;
-      --panel:#0d1512;
-      --panel2:#101d19;
-      --green:#00d084;
-      --green2:#24f2b1;
-      --text:#f4fff9;
-      --muted:#b7c8bf;
-      --line:rgba(0,208,132,.28);
-      --danger:#ffcf5c;
+      --bg:#030706; --panel:#07110f; --panel2:#0b1715; --teal:#00d6a3; --teal2:#18f0bf; --text:#f4fffb; --muted:#b8ccc7; --line:rgba(0,214,163,.35); --gold:#ffc83d;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at top left,#123b2d 0,#050806 38%,#020302 100%);color:var(--text);line-height:1.6}
-    a{color:inherit}
-    .wrap{width:min(1120px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:20;background:rgba(5,8,6,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
-    .brand img{width:54px;height:54px;object-fit:contain;border-radius:10px;background:#fff;padding:3px}
-    .nav a.btn{padding:10px 16px;border-radius:999px;background:var(--green);color:#00130c;text-decoration:none;font-weight:800;white-space:nowrap}
-    .hero{padding:70px 0 50px;position:relative;overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
-    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(0,208,132,.09);padding:8px 13px;border-radius:999px;color:var(--green2);font-weight:700}
-    h1{font-size:clamp(36px,6vw,68px);line-height:1.02;margin:18px 0 16px;letter-spacing:-1.6px}
-    .hero p{font-size:20px;color:var(--muted);max-width:650px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-    .btn{display:inline-block;padding:14px 20px;border-radius:14px;text-decoration:none;font-weight:800;border:1px solid var(--line)}
-    .primary{background:var(--green);color:#00130c;border-color:var(--green)}
-    .secondary{background:rgba(255,255,255,.05);color:var(--text)}
-    .hero-card{background:linear-gradient(145deg,rgba(0,208,132,.16),rgba(255,255,255,.04));border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:0 24px 90px rgba(0,0,0,.35)}
-    .hero-card img{width:100%;border-radius:18px;background:#fff;padding:14px;object-fit:contain;margin-bottom:18px}
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .stat{background:rgba(0,0,0,.24);border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center}
-    .stat strong{display:block;font-size:25px;color:var(--green2)}
-    section{padding:54px 0}
-    .section-title{text-align:center;margin-bottom:28px}
-    .section-title h2{font-size:clamp(28px,4vw,44px);margin:0 0 8px;letter-spacing:-.8px}
-    .section-title p{color:var(--muted);font-size:18px;margin:auto;max-width:760px}
-    .problem-grid,.service-grid,.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:20px;padding:22px;min-height:100%;box-shadow:0 12px 35px rgba(0,0,0,.18)}
-    .icon{width:44px;height:44px;border-radius:14px;background:rgba(0,208,132,.14);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:12px}
-    .card h3{margin:0 0 8px;color:var(--green2);font-size:21px}
-    .card p,.card li{color:var(--muted)}
-    .card ul{padding-left:20px;margin:10px 0 0}
-    .highlight{border:1px solid rgba(255,207,92,.38);background:linear-gradient(145deg,rgba(255,207,92,.12),rgba(0,208,132,.08));border-radius:24px;padding:30px;text-align:center}
-    .highlight h2{margin:0 0 10px;font-size:34px;color:var(--danger)}
-    .coverage{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-    .pill{border:1px solid var(--line);background:rgba(0,208,132,.08);padding:10px 14px;border-radius:999px;color:var(--muted);font-weight:700}
-    .cta{background:linear-gradient(135deg,var(--green),#00a66d);color:#00130c;border-radius:28px;padding:34px;text-align:center}
-    .cta h2{font-size:38px;margin:0 0 8px}
-    .cta p{font-size:18px;margin:8px 0 24px;color:#022216}
-    .cta .btn{background:#020302;color:var(--green2);border-color:#020302}
-    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);text-align:center}
-    .float-wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:#00130c;border-radius:999px;padding:14px 18px;font-weight:900;text-decoration:none;box-shadow:0 12px 35px rgba(0,0,0,.35);z-index:30}
-    @media(max-width:850px){.hero-grid,.problem-grid,.service-grid,.why-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.nav{align-items:flex-start}.brand span{font-size:14px}.hero{padding-top:42px}.float-wa{left:16px;right:16px;text-align:center}.nav a.btn{display:none}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);}
+    a{color:inherit} .wrap{width:min(1180px,92%);margin:auto}.accent{color:var(--teal)}
+    header{position:sticky;top:0;z-index:20;background:rgba(3,7,6,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{height:54px;max-width:260px;object-fit:contain}.links{display:flex;gap:26px;align-items:center;font-weight:700}.links a{text-decoration:none;color:#eafff9;font-size:15px}.links a:hover{color:var(--teal)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;border-radius:999px;padding:14px 22px;background:linear-gradient(135deg,var(--teal),#00b98d);color:#00130f;font-weight:900;box-shadow:0 0 25px rgba(0,214,163,.35);border:0}.btn.ghost{background:transparent;color:var(--teal);border:1px solid var(--teal);box-shadow:none}
+    .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(3,7,6,.95) 0%,rgba(3,7,6,.84) 44%,rgba(3,7,6,.25) 100%),url('https://images.pexels.com/photos/4705635/pexels-photo-4705635.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;}
+    .hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(0,214,163,.24),transparent 32%),linear-gradient(180deg,transparent,rgba(3,7,6,.96));pointer-events:none}.hero-inner{position:relative;z-index:1;min-height:610px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:35px;padding:70px 0}.eyebrow{color:var(--teal);font-weight:900;letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(42px,6vw,76px);line-height:.96;margin:14px 0 18px}.hero p{font-size:20px;line-height:1.55;color:#e8f8f4;max-width:620px}.trust{display:flex;flex-wrap:wrap;gap:22px;margin:30px 0}.trust-item{display:flex;gap:12px;align-items:center;color:#dffdf5;font-weight:800;border-right:1px solid var(--line);padding-right:24px}.trust-item:last-child{border-right:0}.icon{width:34px;height:34px;color:var(--teal);flex:0 0 auto}.hero-card{justify-self:end;width:min(390px,100%);background:rgba(4,12,10,.82);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 0 40px rgba(0,0,0,.55)}.hero-card .big{font-size:70px;line-height:1;color:var(--teal);font-weight:1000}.stars{color:var(--gold);letter-spacing:5px;font-size:22px}
+    section{padding:60px 0}.section-title{text-align:center;font-size:32px;text-transform:uppercase;margin:0 0 28px}.section-title:before,.section-title:after{content:"";display:inline-block;width:120px;max-width:18vw;height:1px;background:var(--line);vertical-align:middle;margin:0 18px}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(180deg,rgba(10,23,21,.95),rgba(4,10,9,.97));border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 18px 35px rgba(0,0,0,.28)}.card-img{height:150px;background-size:cover;background-position:center;position:relative}.card-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.72))}.card-body{padding:20px}.card h3{margin:0 0 12px;font-size:21px}.card p{color:var(--muted);line-height:1.55;margin:0 0 14px}.checks{list-style:none;padding:0;margin:0}.checks li{margin:8px 0;color:#e9fffa}.checks li:before{content:"✓";color:var(--teal);font-weight:900;margin-right:8px}.why{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}.why-item{text-align:center;padding:18px 10px}.why-item p{color:#eafaf6;margin:10px 0 0;line-height:1.35;font-weight:700}.coverage{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}.pill{border:1px solid var(--teal);border-radius:999px;padding:12px 22px;color:#eafff9;background:rgba(0,214,163,.06);font-weight:800}.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.quote{padding:25px;border:1px solid var(--line);border-radius:18px;background:rgba(9,20,18,.9)}.quote p{color:#e9fffa;line-height:1.55}.quote strong{color:var(--teal)}
+    .cta{padding:0 0 60px}.cta-box{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:center;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,rgba(0,214,163,.08),rgba(8,17,15,.96));overflow:hidden}.cta-img{min-height:260px;background:url('https://images.pexels.com/photos/4792729/pexels-photo-4792729.jpeg?auto=compress&cs=tinysrgb&w=1000') center/cover}.cta-text{padding:32px}.cta-text h2{font-size:clamp(28px,4vw,44px);line-height:1.12;margin:0 0 22px}
+    footer{border-top:1px solid var(--line);background:#020504;padding:36px 0}.foot{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:28px}.foot-logo{height:55px;object-fit:contain}.foot h4{color:var(--teal);margin:0 0 12px}.foot p{color:var(--muted);line-height:1.55;margin:8px 0}.float-wa{position:fixed;right:22px;bottom:22px;z-index:30;width:62px;height:62px;border-radius:50%;background:#20d366;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 0 30px rgba(32,211,102,.45);font-size:30px}
+    @media(max-width:900px){.links{display:none}.hero-inner{grid-template-columns:1fr;min-height:auto}.hero-card{justify-self:start}.services{grid-template-columns:1fr}.why{grid-template-columns:repeat(2,1fr)}.testimonials{grid-template-columns:1fr}.cta-box{grid-template-columns:1fr}.foot{grid-template-columns:1fr}.section-title:before,.section-title:after{display:none}.hero h1{font-size:42px}}
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <div class="brand"><img src="logo.png" alt="Logo Claymore Info Soluciones"><span>Claymore Info Soluciones</span></div>
-      <a class="btn" href="https://wa.me/50687585969?text=Hola%20Claymore%20Info%20Soluciones%2C%20quiero%20solicitar%20un%20diagn%C3%B3stico%20para%20mi%20equipo" target="_blank">WhatsApp</a>
+      <img src="assets/logo.png" alt="Claymore Info Soluciones" class="logo" />
+      <nav class="links"><a href="#servicios">Servicios</a><a href="#nosotros">Nosotros</a><a href="#cobertura">Cobertura</a><a href="#contacto">Contacto</a><a class="btn" href="https://wa.me/50687585969?text=Hola,%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20un%20diagn%C3%B3stico%20inicial." target="_blank">WhatsApp</a></nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
+    <section class="hero" id="inicio">
+      <div class="wrap hero-inner">
         <div>
-          <span class="badge">Servicio a domicilio en Nicoya y alrededores</span>
-          <h1>Soporte técnico profesional para computadoras, redes e Internet.</h1>
-          <p>Reparamos, optimizamos y damos mantenimiento a tus equipos para evitar fallas, lentitud, pérdida de tiempo y gastos innecesarios.</p>
-          <div class="actions">
-            <a class="btn primary" href="https://wa.me/50687585969?text=Hola%2C%20quiero%20un%20diagn%C3%B3stico%20inicial%20gratis" target="_blank">Solicitar diagnóstico gratis</a>
-            <a class="btn secondary" href="#servicios">Ver servicios</a>
+          <div class="eyebrow">Servicio a domicilio</div>
+          <h1>Soporte Técnico <span class="accent">Profesional en Nicoya</span> y Alrededores</h1>
+          <p>Reparación, mantenimiento, optimización y soporte para computadoras, redes e Internet. Atención clara, rápida y garantizada.</p>
+          <div class="trust">
+            <div class="trust-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Más de 100<br>clientes satisfechos</div>
+            <div class="trust-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Diagnóstico<br>inicial gratis</div>
           </div>
+          <a class="btn" href="https://wa.me/50687585969?text=Hola,%20quiero%20solicitar%20un%20diagn%C3%B3stico%20inicial%20para%20mi%20equipo." target="_blank">💬 Escribir por WhatsApp</a>
         </div>
         <div class="hero-card">
-          <img src="logo.png" alt="Claymore Info Soluciones">
-          <div class="stats">
-            <div class="stat"><strong>100+</strong><span>clientes satisfechos</span></div>
-            <div class="stat"><strong>Nicoya</strong><span>y alrededores</span></div>
-            <div class="stat"><strong>Garantía</strong><span>en servicios</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="section-title">
-          <h2>¿Tu computadora presenta estos problemas?</h2>
-          <p>Antes de comprar otra computadora o dejar que el problema empeore, una revisión profesional puede ahorrarte dinero.</p>
-        </div>
-        <div class="problem-grid">
-          <div class="card"><div class="icon">🐢</div><h3>Está muy lenta</h3><p>Puede necesitar optimización, limpieza de software, SSD o mantenimiento interno.</p></div>
-          <div class="card"><div class="icon">🔥</div><h3>Se calienta mucho</h3><p>El polvo y la pasta térmica vencida reducen el rendimiento y pueden dañar piezas.</p></div>
-          <div class="card"><div class="icon">⚠️</div><h3>Falla o se apaga</h3><p>Revisamos hardware, software, temperaturas, disco, memoria y sistema operativo.</p></div>
+          <div class="stars">★★★★★</div>
+          <div class="big">100+</div>
+          <h2>Clientes satisfechos</h2>
+          <p>Experiencia comprobada en Liberia, Nicoya y alrededores.</p>
         </div>
       </div>
     </section>
 
     <section id="servicios">
       <div class="wrap">
-        <div class="section-title">
-          <h2>Nuestros servicios</h2>
-          <p>Soluciones pensadas para hogares, estudiantes, profesionales y pequeñas empresas.</p>
-        </div>
-        <div class="service-grid">
-          <div class="card"><div class="icon">🧰</div><h3>Mantenimiento preventivo</h3><ul><li>Limpieza interna</li><li>Revisión de temperaturas</li><li>Optimización general</li><li>Mayor vida útil</li></ul></div>
-          <div class="card"><div class="icon">💻</div><h3>Reparación de computadoras</h3><ul><li>Diagnóstico profesional</li><li>Fallas de hardware</li><li>Errores de Windows</li><li>Equipos que no encienden</li></ul></div>
-          <div class="card"><div class="icon">⚡</div><h3>Optimización</h3><ul><li>Equipo más rápido</li><li>Limpieza de archivos basura</li><li>Configuración de inicio</li><li>Actualizaciones</li></ul></div>
-          <div class="card"><div class="icon">🛡️</div><h3>Eliminación de virus</h3><ul><li>Malware y amenazas</li><li>Protección de archivos</li><li>Configuración segura</li><li>Revisión completa</li></ul></div>
-          <div class="card"><div class="icon">🌐</div><h3>Redes e Internet</h3><ul><li>WiFi lento</li><li>Routers</li><li>Cableado</li><li>Redes para negocios</li></ul></div>
-          <div class="card"><div class="icon">💾</div><h3>Repuestos y mejoras</h3><ul><li>SSD y discos duros</li><li>Memoria RAM</li><li>Cargadores</li><li>Pantallas y teclados</li></ul></div>
+        <h2 class="section-title"><span class="accent">Nuestros</span> Servicios</h2>
+        <div class="services">
+          <article class="card"><div class="card-img" style="background-image:url('https://images.pexels.com/photos/4792729/pexels-photo-4792729.jpeg?auto=compress&cs=tinysrgb&w=900')"></div><div class="card-body"><h3>Reparación de Computadoras</h3><p>Solución de fallas de hardware y software.</p><ul class="checks"><li>No enciende</li><li>Pantalla azul o errores</li><li>Equipo lento o congelado</li></ul></div></article>
+          <article class="card"><div class="card-img" style="background-image:url('https://images.pexels.com/photos/4705635/pexels-photo-4705635.jpeg?auto=compress&cs=tinysrgb&w=900')"></div><div class="card-body"><h3>Mantenimiento Preventivo</h3><p>Limpieza interna y revisión para evitar fallas futuras.</p><ul class="checks"><li>Limpieza completa</li><li>Revisión de temperaturas</li><li>Mayor vida útil</li></ul></div></article>
+          <article class="card"><div class="card-img" style="background-image:url('https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=900')"></div><div class="card-body"><h3>Optimización de Equipos</h3><p>Mejoramos velocidad, inicio y estabilidad del sistema.</p><ul class="checks"><li>Archivos basura</li><li>Programas innecesarios</li><li>Sistema más estable</li></ul></div></article>
+          <article class="card"><div class="card-img" style="background-image:url('https://images.pexels.com/photos/5380651/pexels-photo-5380651.jpeg?auto=compress&cs=tinysrgb&w=900')"></div><div class="card-body"><h3>Eliminación de Virus</h3><p>Protección contra virus, malware y amenazas.</p><ul class="checks"><li>Limpieza de malware</li><li>Configuración segura</li><li>Protección de información</li></ul></div></article>
+          <article class="card"><div class="card-img" style="background-image:url('https://images.pexels.com/photos/4219861/pexels-photo-4219861.jpeg?auto=compress&cs=tinysrgb&w=900')"></div><div class="card-body"><h3>Redes e Internet</h3><p>Configuración de routers, WiFi y cableado.</p><ul class="checks"><li>WiFi lento</li><li>Routers</li><li>Redes para oficinas</li></ul></div></article>
+          <article class="card"><div class="card-img" style="background-image:url('https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=900')"></div><div class="card-body"><h3>Venta e Instalación de Repuestos</h3><p>Mejoras y reparación con componentes de calidad.</p><ul class="checks"><li>SSD y HDD</li><li>Memorias RAM</li><li>Pantallas y teclados</li></ul></div></article>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="wrap highlight">
-        <h2>Diagnóstico inicial gratis</h2>
-        <p>Revisamos el estado del equipo y te damos una recomendación clara antes de que gastes dinero.</p>
-        <a class="btn primary" href="https://wa.me/50687585969?text=Hola%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20inicial" target="_blank">Agendar por WhatsApp</a>
-      </div>
-    </section>
-
-    <section>
+    <section id="nosotros">
       <div class="wrap">
-        <div class="section-title">
-          <h2>¿Por qué elegir Claymore?</h2>
-        </div>
-        <div class="why-grid">
-          <div class="card"><div class="icon">⭐</div><h3>100+ clientes satisfechos</h3><p>Experiencia atendiendo clientes en Liberia, Nicoya y alrededores.</p></div>
-          <div class="card"><div class="icon">🚗</div><h3>Servicio a domicilio</h3><p>Atención cómoda para hogares, estudiantes, profesionales y negocios.</p></div>
-          <div class="card"><div class="icon">🤝</div><h3>Transparencia</h3><p>Explicamos el problema en lenguaje sencillo y damos recomendaciones honestas.</p></div>
+        <h2 class="section-title">¿Por qué <span class="accent">elegirnos?</span></h2>
+        <div class="why">
+          <div class="why-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><p>Más de 100 clientes satisfechos</p></div>
+          <div class="why-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 18V6a2 2 0 0 0-2-2H4v14"/><path d="M15 18H3"/><path d="M19 18h2v-6h-4"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><p>Servicio a domicilio rápido</p></div>
+          <div class="why-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 11 2-2-2-2"/><path d="M11 13h4"/><rect width="18" height="18" x="3" y="3" rx="2"/></svg><p>Diagnóstico claro y profesional</p></div>
+          <div class="why-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V5l8-3 8 3z"/></svg><p>Garantía en nuestros servicios</p></div>
+          <div class="why-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg><p>Precios justos y transparentes</p></div>
+          <div class="why-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V5a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg><p>Explicamos en lenguaje sencillo</p></div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="wrap">
-        <div class="section-title">
-          <h2>Cobertura</h2>
-          <p>Atendemos en Nicoya y zonas cercanas.</p>
-        </div>
-        <div class="coverage">
-          <span class="pill">Nicoya</span><span class="pill">Hojancha</span><span class="pill">Santa Cruz</span><span class="pill">Cañas</span><span class="pill">Belén</span><span class="pill">Sámara</span><span class="pill">Nosara</span><span class="pill">Mansión</span><span class="pill">Zonas cercanas</span>
+        <h2 class="section-title">Lo que dicen <span class="accent">nuestros clientes</span></h2>
+        <div class="testimonials">
+          <div class="quote"><div class="stars">★★★★★</div><p>“Excelente servicio, muy rápido y profesional. Mi computadora quedó como nueva.”</p><strong>Cliente en Nicoya</strong></div>
+          <div class="quote"><div class="stars">★★★★★</div><p>“Tenía problemas con el WiFi y lo solucionaron en minutos. Muy recomendado.”</p><strong>Cliente en Sámara</strong></div>
+          <div class="quote"><div class="stars">★★★★★</div><p>“Buen precio, honesto y explica todo. Ahora mi PC funciona mucho mejor.”</p><strong>Cliente en Hojancha</strong></div>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="wrap cta">
-        <h2>Dale nueva vida a tu computadora</h2>
-        <p>Escríbenos y solicita tu diagnóstico inicial gratis.</p>
-        <a class="btn" href="https://wa.me/50687585969?text=Hola%20Claymore%2C%20necesito%20soporte%20t%C3%A9cnico" target="_blank">Escribir por WhatsApp</a>
-        <p><strong>WhatsApp:</strong> +506 8758 5969 &nbsp; | &nbsp; <strong>WhatsApp:</strong> +506 8943 4574</p>
-        <p><strong>Correo:</strong> claymoreinfosoluciones@gmail.com</p>
+    <section id="cobertura">
+      <div class="wrap">
+        <h2 class="section-title">Cobertura de <span class="accent">Servicio</span></h2>
+        <div class="coverage"><span class="pill">Nicoya</span><span class="pill">Hojancha</span><span class="pill">Santa Cruz</span><span class="pill">Cañas</span><span class="pill">Belén</span><span class="pill">Sámara</span><span class="pill">Nosara</span><span class="pill">Mansión</span><span class="pill">Zonas cercanas</span></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap cta-box">
+        <div class="cta-img"></div>
+        <div class="cta-text">
+          <h2>No esperes a que tu computadora deje de encender. <span class="accent">Una revisión a tiempo puede salvar tus archivos y evitar gastos mayores.</span></h2>
+          <a class="btn" href="https://wa.me/50687585969?text=Hola,%20quiero%20agendar%20una%20revisi%C3%B3n%20de%20mi%20computadora." target="_blank">💬 Escribir por WhatsApp</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">© Claymore Info Soluciones — Reparación de computadoras y soporte técnico en Nicoya.</div>
+  <footer id="contacto">
+    <div class="wrap foot">
+      <div><img src="assets/logo.png" alt="Claymore Info Soluciones" class="foot-logo"><p>Soluciones tecnológicas confiables para tu hogar o negocio.</p></div>
+      <div><h4>Contacto</h4><p>WhatsApp: +506 8758 5969</p><p>WhatsApp: +506 8943 4574</p><p>claymoreinfosoluciones@gmail.com</p><p>Facebook: Claymore Info Soluciones</p></div>
+      <div><h4>Horario y zona</h4><p>Nicoya · Hojancha · Santa Cruz · Cañas · Belén · Sámara · Nosara · Mansión · Zonas cercanas</p></div>
+    </div>
   </footer>
-  <a class="float-wa" href="https://wa.me/50687585969?text=Hola%20Claymore%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank">📲 WhatsApp</a>
+  <a class="float-wa" href="https://wa.me/50687585969?text=Hola,%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20informaci%C3%B3n." target="_blank" aria-label="WhatsApp">💬</a>
 </body>
 </html>
